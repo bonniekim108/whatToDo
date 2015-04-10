@@ -1,5 +1,7 @@
+//user interaction doesn't provide desired results
+//solution: add interactivity so user can manage daily todos
 var taskInput = document.getElementById("new-task"); //new task
-var addButton; //first button
+var addButton = document.getElementsByTagName("button")[0]; //first button
 var incompleteTasksHolder = document.getElementById("incomplete-tasks"); //unordered list of incomplete tasks
 var completedTasksHolder = document.getElementById("complete-tasks"); //completed tasks
 
@@ -46,4 +48,20 @@ var taskComplete = function() {
 var taskIncomplete = function() {
   //When checkbox is not checked
     //Append task list item to #incomplete-tasks
+}
+var bindTaskEvents = function(TaskListItem, checkBoxEventHandler) {
+  console.log("bind list item events");
+  //select its children
+    //bind editTask to edit button
+    //bind deleteTask to delete button
+    //bind checkBoxEventHandler to checkbox
+}
+addButton.onclick = addTask;
+
+for(var i = 0; i < incompleteTasksHolder.children.length; i++) {
+  bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
+}
+
+for(var i = 0; i < completedTasksHolder.children.length; i++) {
+  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
