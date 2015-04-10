@@ -1,4 +1,45 @@
-body {
-  color: black;
-  
+* {
+  font-family: 'Roboto Condensed', sans-serif;
 }
+
+body {
+  color: #4B4D52;
+  background-color: #FFF2E7;
+}
+
+.container {
+  margin: 100px auto 0;
+  width: 450px;
+  display: block;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  float: left;
+}
+
+li, h3 {
+  list-style: none;
+}
+
+h3 {
+  padding: 10px;
+}
+
+button {
+  background-color: #D0CABF;
+  color: 4B4D52;
+  font-size: 15px;
+  width: 80px;
+  margin: 10px 0 0;
+  padding: 0 0 0;
+}
+
+
+
+
+
+
